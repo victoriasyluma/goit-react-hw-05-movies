@@ -1,0 +1,19 @@
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.list_movies {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list_item {
+  display: flex;
+  flex-direction: row;
+}

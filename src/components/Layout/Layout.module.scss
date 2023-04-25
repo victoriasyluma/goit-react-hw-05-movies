@@ -1,0 +1,15 @@
+.header {
+  background-color: #282c34;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+}

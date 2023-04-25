@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+
+  .list {
+    display: flex;
+
+    font-size: calc(10px + 2vmin);
+    color: white;
+    gap: 50px;
+    list-style: none;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+
+  &[aria-current='page'] {
+    color: orange;
+  }
+
+  &:hover:not([aria-current='page']) {
+    color: red;
+  }
+}
