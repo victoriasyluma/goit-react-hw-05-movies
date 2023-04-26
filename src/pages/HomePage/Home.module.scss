@@ -3,7 +3,7 @@
   font-weight: 700;
   color: #000;
   margin-bottom: 20px;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .list_movies {
@@ -16,4 +16,15 @@
 .list_item {
   display: flex;
   flex-direction: row;
+}
+
+.link {
+  color: black;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: orange;
+  }
 }

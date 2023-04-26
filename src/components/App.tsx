@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-import { MovieDetails } from '../pages/MovieDetails/MovieDetails';
-import { NotFound } from '../pages/NotFound/NotFound';
-import { Layout } from './Layout/Layout';
-import { Home } from '../pages/HomePage/Home';
-import { Cast } from './Cast/Cast';
-import { Reviews } from './Reviews/Reviews';
-import { Movies } from '../components/Movies/Movies';
+const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
+const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
+const Layout = lazy(() => import('./Layout/Layout'));
+const Home = lazy(() => import('../pages/HomePage/Home'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
+const Movies = lazy(() => import('../components/Movies/Movies'));
 
 export const App = () => {
   return (

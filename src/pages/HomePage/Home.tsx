@@ -18,7 +18,7 @@ export const Home = () => {
       <ul className={StyleSheet.list_movies}>
         {movies.map((movie) => (
           <li key={movie.id} className={StyleSheet.list_item}>
-            <Link to={`movies/${movie.id}`}>
+            <Link to={`movies/${movie.id}`} className={StyleSheet.link}>
               {movie.title ? movie.title : movie.name}
             </Link>
           </li>
@@ -27,3 +27,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

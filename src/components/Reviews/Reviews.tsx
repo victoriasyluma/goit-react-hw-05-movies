@@ -30,3 +30,5 @@ export const Reviews = () => {
     </ul>
   );
 };
+
+export default Reviews;
