@@ -8,9 +8,10 @@
 
 .list_movies {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
+  column-gap: 30px;
 }
 
 .list_item {
@@ -19,12 +20,25 @@
 }
 
 .link {
+  position: relative;
   color: black;
 
   text-decoration: none;
   text-transform: uppercase;
 
   &:hover {
+    color: orange;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #282c34;
     color: orange;
   }
 }

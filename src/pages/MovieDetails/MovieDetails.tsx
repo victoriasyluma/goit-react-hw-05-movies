@@ -10,18 +10,18 @@ import { getMovieDetailsById } from '../../service/Api';
 import styles from './MovieDetails.module.scss';
 
 export const MovieDetails = () => {
-  const [movies, setMovies] = useState(null);
+  const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    getMovieDetailsById(movieId).then(setMovies);
+    getMovieDetailsById(movieId).then(setMovie);
   }, [movieId]);
 
   return (
-    movies && (
+    movie && (
       <>
         <button
           className={styles.button}
@@ -33,11 +33,11 @@ export const MovieDetails = () => {
           Go back
         </button>
         <div className={styles.main_container}>
-          {movies.poster_path ? (
+          {movie.poster_path ? (
             <div className={styles.container_img}>
               <img
-                src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`}
-                alt={`${movies.title} poster`}
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={`${movie.title} poster`}
               />
             </div>
           ) : (
@@ -47,15 +47,15 @@ export const MovieDetails = () => {
           <div className={styles.container_info}>
             {' '}
             <h1>
-              {movies.title}({movies.release_date.slice(0, 4)})
+              {movie.title}({movie.release_date.slice(0, 4)})
             </h1>
             <h2>Overview</h2>
-            <p>{movies.overview}</p>
+            <p>{movie.overview}</p>
             <h3>
-              Users score: <span>{movies.vote_average}</span>
+              Users score: <span>{movie.vote_average}</span>
             </h3>
             <h3>Genres:</h3>
-            <p> {movies.genres.map((genre) => genre.name).join(', ')}</p>
+            <p> {movie.genres.map((genre) => genre.name).join(', ')}</p>
           </div>
         </div>
         <h4 className={styles.title}> Additional information </h4>
