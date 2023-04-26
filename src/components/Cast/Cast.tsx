@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCastById } from '../../service/Api';
+import { TCast } from '../movies.types';
 import styles from './Cast.module.scss';
 
 export const Cast = () => {
-  const [cast, setCast] = useState([]);
+  const [cast, setCast] = useState<TCast[]>([]);
   const { movieId } = useParams();
 
   useEffect(() => {

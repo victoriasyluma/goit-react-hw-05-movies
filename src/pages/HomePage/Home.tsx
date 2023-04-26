@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { getTrendingMovies } from '../../service/Api';
 import { Link } from 'react-router-dom';
 import StyleSheet from './Home.module.scss';
+import { TMovie } from '../../components/movies.types';
 
 export const Home = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<TMovie[]>([]);
 
   useEffect(() => {
     getTrendingMovies()

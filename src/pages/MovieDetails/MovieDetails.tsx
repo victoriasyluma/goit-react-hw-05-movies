@@ -6,12 +6,13 @@ import {
   useLocation,
   useNavigate,
 } from 'react-router-dom';
+import { TMovie } from '../../components/movies.types';
 import { getMovieDetailsById } from '../../service/Api';
 import styles from './MovieDetails.module.scss';
 
 export const MovieDetails = () => {
-  const [movie, setMovie] = useState(null);
-  const { movieId } = useParams();
+  const [movie, setMovie] = useState<TMovie>(null);
+  const { movieId } = useParams<{ movieId: string }>();
   const location = useLocation();
 
   const navigate = useNavigate();

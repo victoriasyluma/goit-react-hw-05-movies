@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { getReviewsById } from '../../service/Api';
 import { useParams } from 'react-router-dom';
 import styles from './Reviews.module.scss';
+import { TReview } from '../movies.types';
 
 export const Reviews = () => {
-  const [review, setReview] = useState([]);
+  const [review, setReview] = useState<TReview[]>([]);
   const { movieId } = useParams();
 
   useEffect(() => {
