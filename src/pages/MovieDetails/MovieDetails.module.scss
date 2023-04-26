@@ -1,0 +1,100 @@
+.main_container {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-left: 30px;
+  gap: 30px;
+}
+
+.container_info {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+  max-width: 400px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.container_img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container_links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.cast {
+  background-color: #282c34;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
+.cast:hover {
+  color: orange;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.button {
+  background-color: #282c34;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 30px;
+  margin-top: 10px;
+
+  &:hover {
+    color: orange;
+  }
+}

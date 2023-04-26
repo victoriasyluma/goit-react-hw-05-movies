@@ -14,18 +14,22 @@ export const getMovieDetailsById = (id) => {
 };
 
 export const getCastById = (id) => {
-  return axios.get(
-    `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${KEY}`
-  );
+  return axios
+    .get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${KEY}`)
+    .then((response) => response.data.cast);
 };
 
 export const getReviewsById = (id) => {
-  return axios.get(
-    `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${KEY}`
-  );
+  return axios
+    .get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${KEY}`)
+    .then((response) => response.data.results);
 };
 
 export const searchMovieByKeyword = (keyword) => {
-  return axios.get(`
-https://api.themoviedb.org/3/search/movie?query=${keyword}&api_key=${KEY}`);
+  return axios
+    .get(
+      `
+https://api.themoviedb.org/3/search/movie?query=${keyword}&api_key=${KEY}`
+    )
+    .then((response) => response.data.results);
 };
