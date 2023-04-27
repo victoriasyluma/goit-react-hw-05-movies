@@ -6,7 +6,7 @@ const Layout = lazy(() => import('./Layout/Layout'));
 const Home = lazy(() => import('../pages/HomePage/Home'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));
-const Movies = lazy(() => import('../components/Movies/Movies'));
+const Movies = lazy(() => import('../pages/MoviesSearchPage/Movies'));
 
 export const App = () => {
   return (
